@@ -40,7 +40,7 @@ export function getPost(postID) {
 export function deletePost(postID, callback) {
     
     const url = `${ROOT_URL}/posts/${postID}${API_KEY}`
-    const request = axios.delete(url).then(() => callback());
+    axios.delete(url).then(() => callback());
     // console.log("inside the action: request");
     // console.log(request);
     return {
@@ -66,4 +66,13 @@ export function createPost(values, callback) {
          
     }
 
+}
+
+export function selectBook(book){
+    // selectBOok should be an action creator that returns a POJO, simple one preferred
+    console.log('Book has been sleected:', book.title);
+    return {
+        type: 'BOOK_SELECTED',
+        payload: book
+    };
 }

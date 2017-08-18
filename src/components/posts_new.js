@@ -34,7 +34,7 @@ class PostsNew extends Component {
         
         
         this.props.createPost(values, () => {
-            this.props.history.push('/');
+            this.props.history.push('/posts');
         });
 
     }
@@ -69,7 +69,7 @@ class PostsNew extends Component {
                     label="Content"
                 />
                 <button type="submit" className="btn btn-primary">Submit</button>
-                <Link className="btn btn-danger" to="/">
+                <Link className="btn btn-danger" to="/posts">
                     Cancel
                 </Link>
             </form>

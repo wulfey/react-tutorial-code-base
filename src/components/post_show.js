@@ -48,7 +48,7 @@ class PostShow extends Component {
     onDeleteClick(){
         const id = this.props.match.params.id
         this.props.deletePost(id, () => {
-            this.props.history.push('/');
+            this.props.history.push('/posts');
         });
     }
 
@@ -72,7 +72,7 @@ class PostShow extends Component {
                 <Link className="btn btn-success" to="/posts/new">
                     Add a Post
                 </Link>
-                <Link className="btn btn-primary" to="/">
+                <Link className="btn btn-primary" to="/posts">
                     Posts Index
                 </Link>
                 <button
