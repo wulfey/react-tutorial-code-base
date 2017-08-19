@@ -43,10 +43,13 @@ const Footer = ({
 // container, provides the data and the behavior
 class FilterLink extends Component {
   componentDidMount(){
-    const {store} = this.context;
+    // const {store} = this.context;
+    // console.log("INDIXSE filterlink");
+
     this.unsubscribe = this.props.store.subscribe(() =>
        this.forceUpdate()
     )
+    // console.log(this.context);
   }
 
   componentWillUnMount(){
@@ -54,9 +57,19 @@ class FilterLink extends Component {
   }
 
   render(){
+    // console.log("INDIXSE filterlink");
+    // console.log(this.props);
+    // console.log(this.contex);
+    // console.log(this.props.store);
+
     const props = this.props;
-    const {store} = this.contex;
+    // const {store} = this.contex;
+    // console.log(props.store.getState());
+    // console.log(props.store);
     const state = this.props.store.getState();
+    // console.log(`this is STATE for ${props.filter}:`);
+    // console.log(state);
+    // console.log(state.visibilityFilter);
     return(
       <Link
         active={

@@ -15,6 +15,8 @@ import HomePage from './components/homePage';
 import BookIndex from './components/book_index';
 import WeatherIndex from './components/weather_index';
 import TicTac from './components/tictac';
+import Todo from './components/todo_index';
+import VideoApp from './components/video_index';
 
 
 // create a store with middleware to manage actions
@@ -31,7 +33,8 @@ ReactDOM.render(
             <div>
                 <App/>  
                 <Switch>
-                    <Route path="/todo" component={TicTac} />
+                    <Route path="/video" component={VideoApp} />
+                    <Route path="/todo" component={Todo} />
                     <Route path="/tictac" component={TicTac} />
                     <Route path="/weather" component={WeatherIndex} />
                     <Route path="/books" component={BookIndex} />

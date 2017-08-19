@@ -20,6 +20,7 @@ const AddTodo = ({
       }} />
       <button onClick={() => {
         console.log('dispatching to the store');
+        console.log(input.value);
         store.dispatch({
             type: 'ADD_TODO',
             id: nextTodoId++,

@@ -12,6 +12,7 @@ const Todo = ({
   text
 }) => (
   <li 
+  className="list-group-item todo"
   onClick={onClick}
   style={{
     textDecoration:
@@ -35,15 +36,25 @@ const TodoList = ({
       <ul></ul>
     );
   }
-
+  console.log("Inside TOdoLIST");
+  console.log(todos);
   return (
-  <ul>
-    {todos.map(todo => 
+  <ul className="list-inline">
+    {todos.map((todo) => {
+      console.log('individual todo:');
+      console.log(todo);
+      return (
       <Todo
-        key={todo.id}
-        {...todo}
         onClick={() => onTodoClick(todo.id)}
+        key={todo.id}
+        text={todo.text}
+        completed={todo.completed}
+
+        
       />
+      )
+    }
+      
     )}
   </ul>
   )

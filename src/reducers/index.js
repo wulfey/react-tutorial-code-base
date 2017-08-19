@@ -4,7 +4,7 @@ import books from './books_reducer';
 import activeBook from './active_book_reducer';
 import WeatherReducer from './fetch_weather_reducer';
 import { reducer as formReducer } from 'redux-form';
-import todo from './todo_reducer';
+import TodoReducer from './todo_reducer';
 import visibilityFilter from './visibilityFilter_reducer';
 
 
@@ -20,7 +20,7 @@ const rootReducer = combineReducers({
     activeBook: activeBook,
     weather: WeatherReducer,
     form: formReducer,
-    todo: todo,
+    todos: TodoReducer,
     visibilityFilter: visibilityFilter
 });
 export default rootReducer;

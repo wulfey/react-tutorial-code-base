@@ -21,6 +21,12 @@ class LinkList extends Component {
                 <Link className="btn btn-success" to="/tictac">
                     TicTac App
                 </Link>
+                <Link className="btn btn-success" to="/todo">
+                    Todo App
+                </Link>
+                <Link className="btn btn-success" to="/video">
+                    Video Search App
+                </Link>
             </div>
         )
     }

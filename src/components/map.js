@@ -1,8 +1,8 @@
 import React from 'react';
 import {Component} from 'react';
 // import {GoogleMapLoader, GoogleMap} from 'react-google-maps';
-import { withGoogleMap, GoogleMapLoader,GoogleMap, Marker } from "react-google-maps";
-import _ from "lodash";
+import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+// import _ from "lodash";
 
 
 // export default class Mapper extends Component {

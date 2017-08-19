@@ -31,9 +31,11 @@ class TicTac extends Component {
 
   handleClick(index) {
     if(this.state.board[index] === ""){
-      this.state.board[index] = this.state.currentTurn
+      let temp = this.state.board;
+      temp[index] = this.state.currentTurn
+      // this.state.board[index] = this.state.currentTurn
       this.setState({
-        board: this.state.board, 
+        board: temp, 
         currentTurn: this.state.currentTurn === this.state.PLAYER_ONE_SYMBOL ? this.state.PLAYER_TWO_SYMBOL : this.state.PLAYER_ONE_SYMBOL,
         winner: this.checkForWinner()
       })
@@ -57,6 +59,7 @@ class TicTac extends Component {
     // 
 
     render() {
+        console.log(this.props);
         return (
             <div>
                 <div className="wrapper-winner">
