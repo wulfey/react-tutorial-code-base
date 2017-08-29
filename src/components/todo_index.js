@@ -21,7 +21,7 @@ import AddTodo from './addTodo';
 // import counter from '../reducers/counter_reducer';
 import reducers from '../reducers/index';
 
-import { Provider } from "react-redux";
+// import { Provider } from "react-redux";
 // import  deepFreeze from 'deep-freeze';
 // import  expect from 'expect';
 
@@ -68,7 +68,7 @@ const getVisibleTodos = (
 class VisibleTodoList extends Component {
   
   componentDidMount(){
-    const {store} = this.context;
+    // const {store} = this.context;
     this.unsubscribe = this.props.store.subscribe(() =>
         this.forceUpdate()
     )

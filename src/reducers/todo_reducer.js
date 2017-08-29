@@ -45,9 +45,9 @@ export default function TodoReducer (state = [], action) {
                 todo(undefined,action)
             ];
         case 'TOGGLE_TODO':
-            console.log("toggling TODO");
-            console.log(state);
-            console.log(action);
+            // console.log("toggling TODO");
+            // console.log(state);
+            // console.log(action);
             let returnVar = state.map(t => todo(t,action));
                 
             //     {
@@ -57,8 +57,8 @@ export default function TodoReducer (state = [], action) {
             //         todo(t,action)
             //     )
             // });
-            console.log("After the toggling:");
-            console.log(returnVar);
+            // console.log("After the toggling:");
+            // console.log(returnVar);
             return returnVar;
             
     default:

@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Alpha",
+      "age": 20,
+      "companyId": "11"
+    },
+    {
+      "id": "2",
+      "firstName": "Beta",
+      "age": 25,
+      "companyId": "11"
+    },
+    {
+      "id": "3",
+      "firstName": "Celta",
+      "age": 33,
+      "companyId": "12"
+    },
+    {
+      "id": "4",
+      "firstName": "Dalerion",
+      "age": 35,
+      "companyId": "13"
+    },
+    {
+      "id": "5",
+      "firstName": "Balerion",
+      "age": 55,
+      "companyId": "13"
+    }
+  ],
+  "companies": [
+    {
+      "id": "11",
+      "name": "Apple",
+      "description": "iphones"
+    },
+    {
+      "id": "12",
+      "name": "Google",
+      "description": "search"
+    },
+    {
+      "id": "13",
+      "name": "Amazon",
+      "description": "books"
+    }
+  ]
+}

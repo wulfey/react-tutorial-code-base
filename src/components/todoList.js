@@ -36,13 +36,12 @@ const TodoList = ({
       <ul></ul>
     );
   }
-  console.log("Inside TOdoLIST");
-  console.log(todos);
+  // console.log("Inside TOdoLIST");
+  // console.log(todos);
   return (
   <ul className="list-inline">
     {todos.map((todo) => {
-      console.log('individual todo:');
-      console.log(todo);
+
       return (
       <Todo
         onClick={() => onTodoClick(todo.id)}

@@ -19,12 +19,19 @@ import Todo from './components/todo_index';
 import VideoApp from './components/video_index';
 
 
+// import lyricServer from './server/server';
+
+import CompanyGraphQL from './components/graphQL/graph_index';
+
+
 // create a store with middleware to manage actions
 import ReduxPromise from 'redux-promise';
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 
-
+// lyricServer.listen(4000, () => {
+//   console.log('Listening on the Lyrical server');
+// });
 
 
 ReactDOM.render(
@@ -33,6 +40,7 @@ ReactDOM.render(
             <div>
                 <App/>  
                 <Switch>
+                    <Route path="/CompanyGraphQL" component={CompanyGraphQL} />
                     <Route path="/video" component={VideoApp} />
                     <Route path="/todo" component={Todo} />
                     <Route path="/tictac" component={TicTac} />
@@ -51,6 +59,7 @@ ReactDOM.render(
     
     , document.getElementById('root'));
 registerServiceWorker();
+
 
 
 
