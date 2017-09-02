@@ -7,7 +7,7 @@ import reducers from './reducers/index';
 import './styles/style.css';
 import './styles/bootstrap/dist/css/bootstrap.css';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PostsIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
 import PostShow from './components/post_show';
@@ -38,7 +38,7 @@ ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
         <BrowserRouter>
             <div>
-                <App/>  
+                <App />
                 <Switch>
                     <Route path="/CompanyGraphQL" component={CompanyGraphQL} />
                     <Route path="/video" component={VideoApp} />
@@ -47,16 +47,16 @@ ReactDOM.render(
                     <Route path="/weather" component={WeatherIndex} />
                     <Route path="/books" component={BookIndex} />
                     <Route path="/posts/new" component={PostsNew} />
-                    <Route path={`/posts/:id`}component={PostShow} />
+                    <Route path={`/posts/:id`} component={PostShow} />
                     <Route path="/posts" component={PostsIndex} />
                     <Route path="/" component={HomePage} />
                 </Switch>
-                
+
             </div>
         </BrowserRouter>
     </Provider>
-    
-    
+
+
     , document.getElementById('root'));
 registerServiceWorker();
 

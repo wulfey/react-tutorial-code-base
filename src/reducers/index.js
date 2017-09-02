@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import PostsReducer from './posts_reducer'
 import books from './books_reducer';
 import activeBook from './active_book_reducer';

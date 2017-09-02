@@ -1,24 +1,24 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {selectBook} from '../actions/actions';
-import {bindActionCreators} from 'redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { selectBook } from '../actions/actions';
+import { bindActionCreators } from 'redux';
 
-class BookList extends Component{
+class BookList extends Component {
 
     // map function that makes <li> out of each (book)=>{} in props.books
-    renderList(){
+    renderList() {
         return this.props.books.map((book) => {
             return (
-                <li 
-                key={book.title} 
-                onClick={() => this.props.selectBook(book)}
-                className="list-group-item">
+                <li
+                    key={book.title}
+                    onClick={() => this.props.selectBook(book)}
+                    className="list-group-item">
                     {book.title}
                 </li>
             );
         });
     }
-    render(){
+    render() {
         return (
             <ul className="list-group col-sm-4">
                 {this.renderList()}
@@ -27,7 +27,7 @@ class BookList extends Component{
     }
 }
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
     //what is returned shold be object that is set equal to this.props
     // so whatever is in this object will be set equal to this.props
     return {
@@ -35,8 +35,8 @@ function mapStateToProps(state){
     };
 }
 
-function mapDispatchToProps(dispatch){
-    return bindActionCreators({selectBook: selectBook}, dispatch);
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ selectBook: selectBook }, dispatch);
 }
 //key here, we can now call this.props.selectBook and this will call the aciton creator
 
